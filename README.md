@@ -1,1 +1,1 @@
-# Fashion_Classification-Myntra_Dataset
+# Fashion Classification - Myntra Dataset
