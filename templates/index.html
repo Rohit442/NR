@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion Classification</title>
+</head>
+<body>
+
+<form action="/echo" method="POST">
+    <input name="text">
+    <input type="submit" value="Echo">
+</form>
+
+<br><br>
+
+<form action="/calc" method="POST">
+    <input type="submit" name="submit" value="calc">
+</form>
+
+<form action="/test" method="POST">
+    <input type="submit" name="submit" value="You won't be able to close calc">
+</form>
+
+<span>
+    <input type="file" onchange="readURL(this);">
+    <img id="blah" src="http://placehold.it/180" alt="your image" >
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script id="INLINE_PEN_JS_ID">
+        function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+    
+        reader.onload = function (e) {
+          $('#blah').
+          attr('src', e.target.result);
+        };
+    
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+        //# sourceURL=pen.js
+      </script>
+    
+    </span>
+
+</body>
+</html>
