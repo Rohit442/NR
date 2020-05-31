@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    {% if mydict %}
+        <table>
+            <tbody>
+            {% for idx, msg in mydict.items() %}
+                <tr>
+                    <td>{{ idx+1 }}</td>
+                    <td><img src="{{msg[0]}}" height="300" width="150" alt="{{ msg }}"></td>
+                    {% for custom_msg in msg[1:] %}
+                    <td>{{ custom_msg }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        No results :(
+    {% endif %}
+</body>
+</html>
