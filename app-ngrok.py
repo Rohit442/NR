@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 upload_path = "static/upload"
 label_path = 'Training_labels/labels.csv'
 model_path = 'model'
-threshold = 60
+threshold = 80
 
 
 
