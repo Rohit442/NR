@@ -21,7 +21,7 @@ def get_label(predicted_class):
     
 
 def print_top_3_pred(preds):
-    idx=np.unravel_index(preds.numpy().argsort(axis=None), dims=preds.numpy().shape)
+    idx=np.unravel_index(preds.numpy().argsort(axis=None), shape=preds.numpy().shape)
     top_3_pred=idx[0][-3:]
     top_pred=top_3_pred[-1]
     top3_return_msg=""
