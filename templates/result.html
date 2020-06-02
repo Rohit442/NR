@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        table {border-collapse:collapse; width:70%;}
+        table td {border:solid 1px #fab; height: 250px; word-wrap:break-word;}
+        table th {border:solid 1px #fab; width:450px; word-wrap:break-word;}
+        td {
+  text-align: center;
+  vertical-align: middle;
+}
+body {
+  background-color:rgba(241, 240, 126, 0.3);
+}
+        </style>
     <meta charset="UTF-8">
-    <title>Results</title>
+    <title>Fashion Classification - Results</title>
 </head>
 <body>
+    <div style="margin: 0px auto;">
+        <h1 style="text-align:center;border: 3px solid rgb(34, 37, 34);color: rgba(226, 81, 55, 0.8);">Fashion Classification - Prediction</h1>
+    
+
+        <form style="left: 40%;padding-left:5em;padding-top:1em;padding-bottom:3em;border: 1px solid rgb(34, 37, 34);" action = "/uploader" method = "POST" 
+    enctype = "multipart/form-data">
+    <h2>Upload a Picture : </h2>
+    <input type = "file" name = "file" />
+    
+    <input type = "submit"/>
+    </form></div>
+    <br><br>    
     {% if mydict %}
-        <table>
+        <table style="margin: 0px auto;">
             <tbody>
+                <tr>
+                    <th>S.no</th>
+                    <th>Input image</th>
+                    
+                    <th>Predicted catagory</th>
+                    <th>Probability</th>
+                    <th>Top 3 prediction</th>
+                </tr>
             {% for idx, msg in mydict.items() %}
                 <tr>
                     <td>{{ idx+1 }}</td>
-                    <td><img src="{{msg[0]}}" height="300" width="150" alt="{{ msg }}"></td>
+                    <td ><img src="{{msg[0]}}" height=80% alt="{{ msg[0] }}"></td>
                     {% for custom_msg in msg[1:] %}
-                    <td>{{ custom_msg }}</td>
+                    <td style="width:30%;"><pre>{{ custom_msg }}</pre>
+                    </td>
                     {% endfor %}
                 </tr>
             {% endfor %}
