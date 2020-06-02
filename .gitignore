@@ -1,2 +1,16 @@
 dress-classification.ipynb
 Rough_notes
+model/export.pkl
+Main_app.ipynb
+Temp
+pytorch_model/intial_fashion_model.pth
+templates/result_test.html
+pytorch_model/Fashion_model.pth
+pytorch_model/Fashion_model-fine_tuned.pth
+Training_labels/relabeled_dataset.csv
+.gitignore
+.ipynb_checkpoints/analysing_dataset-checkpoint.ipynb
+.ipynb_checkpoints/Main_app-checkpoint.ipynb
+.ipynb_checkpoints/web_Server-checkpoint.ipynb
+Training_labels/.~lock.relabeled_dataset.csv#
+Training_labels/top_80_catagory.csv
